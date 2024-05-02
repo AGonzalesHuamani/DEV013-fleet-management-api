@@ -19,11 +19,11 @@ export const options = { // opciones de swagger
                     properties: {
                         id: {
                             type: "integer",
-                            example: 9275
+                            example: 280
                         },
                         plate: {
                             type: "string",
-                            example: "ENPB-7532"
+                            example: "DDNG-0487"
                         },
                     },
                 },
@@ -35,30 +35,30 @@ export const options = { // opciones de swagger
                             type: "integer",
                             format: "int64",
                             description: "ID de la trajectoria",
-                            example: 22237
+                            example: 20
                         },
                         taxi_id: {
                             type: "integer",
                             description: "ID de taxi elacionado con esta trayectoria",
                             format: "int64",
-                            example: 9275
+                            example: 6418
                         },
                         date: {
                             type: "string",
                             format: "date-time",
-                            example: "2008-02-02 17:15:21"
+                            example: "2008-02-02 15:21:12"
                         },
                         latitude: {
                             type: "double",
                             description: "Latitud de la posición",
                             format: "int64",
-                            example: 116.27741
+                            example: 116.33652
                         },
                         longitude: {
                             type: "double",
                             description: "Longitud de la posición",
                             format: "int64",
-                            example: 39.89958
+                            example: 39.93665
                         },
                     },
                 },
