@@ -1,5 +1,5 @@
 import express, { Application, Request, Response } from 'express';
-
+import router from './routes/taxis_routes';
 //swagger
 import swaggerUi from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
@@ -15,9 +15,12 @@ app.use(express.json());
 const specs = swaggerJSDoc(options)
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(specs))
 
-app.use('/', (req: Request, res: Response): void => {
-    res.send('Hello world!');
-});
+//rutas declaradas
+app.use(router);
+
+// app.use('/', (req: Request, res: Response): void => {
+//     res.send('Hello world!');
+// });
 
 app.listen(PORT, (): void => {
     console.log('SERVER IS UP ON PORT:', PORT);

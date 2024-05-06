@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-
+import { getAllTaxis } from "../controller/taxis_controller"
 const router: Router = express.Router();
 
 /**
@@ -36,3 +36,7 @@ const router: Router = express.Router();
  *                      items:
  *                          $ref: '#/components/schemas/Taxis'
  */
+router.get('/taxis', getAllTaxis);
+
+
+export default router;
