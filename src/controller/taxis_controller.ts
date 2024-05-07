@@ -13,9 +13,8 @@ export const getAllTaxis: Handler = async (req, res) => {
           skip: skip,
           take: take
         });
-        // console.log(findAll);
         res.status(200).json(findAll); 
       } catch (error) {
-        res.status(404).json("No encontrado")
+        return res.status(400).json({ message: "No encontrado"})
       }
 }
