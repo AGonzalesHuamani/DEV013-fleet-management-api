@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose --collect-coverage ",
     "start": "node ./build/index.js",
     "dev": "tsc & node ./build/index.js",
     "build": "tsc"
