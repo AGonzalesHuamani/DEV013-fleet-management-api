@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+// import   prisma  from '../db'
 import { Handler } from 'express'
 import { getTaxis } from '../services/db_taxis'
-
-const prisma = new PrismaClient()
 
 //Handler: Indica que getAllTaxis es un manejador de solicitudes HTTP
 export const getAllTaxis: Handler = async (req, res) => {

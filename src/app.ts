@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import router from './routes/taxis_routes';
+import routerTrajectories from './routes/trajectories_routes'
 //swagger
 import swaggerUi from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
@@ -16,7 +17,7 @@ const specs = swaggerJSDoc(options)
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(specs))
 
 //rutas declaradas
-app.use(router);
+app.use(router, routerTrajectories);
 
 // app.use('/', (req: Request, res: Response): void => {
 //     res.send('Hello world!');
