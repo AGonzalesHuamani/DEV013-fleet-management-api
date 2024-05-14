@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { getAllTrajectories } from '../controller/trajectories_controller'
+import { getAllTrajectories, getLocationHistory} from '../controller/trajectories_controller'
 
 const routerTrajectories: Router = express.Router();
 
@@ -38,5 +38,41 @@ const routerTrajectories: Router = express.Router();
  *                          $ref: '#/components/schemas/Trajectories'
  */
 routerTrajectories.get('/trajectories', getAllTrajectories );
+
+/**
+ * Get track
+ * @openapi
+ * /trajectories/{id}:
+ *    get:
+ *      tags:
+ *        - Trajectories
+ *      summary: "Buscar trayectoria por Id"
+ *      description: "Este endpoint es para buscar trayectoria por Id."
+ *      parameters:
+ *      
+ *      responses:
+ *        '200':
+ *          description: Operación exitosa. Devuelve el trayectoria buscado.
+ *          content:
+ *            application/json:
+ *              schema:
+ *                $ref: '#/components/schemas/Trajectories'
+ *        '404':
+ *          description: El id de la trayectoria solicitado no se encontró.
+ *          content:
+ *              application/json:
+ *                 schema:
+ *                    $ref: '#/components/schemas/Error'
+ *        '500':
+ *          description: Error en el servidor.
+ *          content:
+ *              application/json:
+ *                 schema:
+ *                    $ref: '#/components/schemas/Error'
+ */
+routerTrajectories.get('/trajectories/:id', getLocationHistory );
+
+// routerTrajectories.get('/trajectories/last' );
+// solo recibe como parametros la paginacion
 
 export default routerTrajectories;
