@@ -7,4 +7,5 @@ export const getTaxis = async ( skip: number, take: number ) => {
     });
     return findAll;
 }
-
+ // paginacion
+ 
