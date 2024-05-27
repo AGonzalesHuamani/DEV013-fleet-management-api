@@ -39,7 +39,7 @@ export const options = { // opciones de swagger
                         },
                         taxi_id: {
                             type: "integer",
-                            description: "ID de taxi elacionado con esta trayectoria",
+                            description: "ID de taxi relacionado con esta trayectoria",
                             format: "int64",
                             example: 6418
                         },
