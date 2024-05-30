@@ -26,6 +26,7 @@ const getAllTrajectories: Handler = async (req, res) => {
 
 const getLocationHistory: Handler = async (req,res) => {
         try {
+            
             const { date } = req.query;
             const {id} = req.params;
             const endDate = new Date(date as string);
@@ -41,7 +42,7 @@ const getLocationHistory: Handler = async (req,res) => {
             endDate.setDate(endDate.getDate() + 1);
 
             const trajectories = await locationHistory(parseInt(id), new Date(date as string), startIndex, Number(take));
-            console.log("trajectories", trajectories);
+            // console.log("trajectories", trajectories);
                 
             if (!trajectories){
                 return res.status(404).json({message: 'No se encontró ninguna trayectoria con el id proporcionado' });

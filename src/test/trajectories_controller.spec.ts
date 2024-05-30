@@ -53,7 +53,7 @@ describe('GET /trajectories/:id', () => {
         expect(response.statusCode).toBe(400);
       });
     it('should return 404 when no path found for id',async() =>{
-        const response = await request(app).get("/trajectories/641000008?date='2008-02-02").send();
+        const response = await request(app).get("/trajectories/64000018?date='2008-02-02").send();
         expect(response.statusCode).toBe(404);
       });
 });
