@@ -55,26 +55,27 @@ const getLocationHistory: Handler = async (req,res) => {
 
 const getLastLocation: Handler = async (req, res) => {
         try {
-            if (!req.query.skip || !req.query.take) {
+            const { skip, take } = req.query;
+    
+            if (!skip || !take) {
                 return res.status(400).json({ message: "Los parámetros 'skip' y 'take' son obligatorios en la consulta." });
-                }
-            if (isNaN(parseInt(req.query.skip as string)) || isNaN(parseInt(req.query.take as string))) {
-                return res.status(400).json({ message: "Los parámetros 'skip' y 'take' tienen que ser un número." });
-                }
-                
-            const skip = parseInt(req.query.skip as string);
-            const take = parseInt(req.query.take as string);
-            
-            if (skip<0 || take<0) {
-            return res.status(400).json({ message: "Los parámetros 'skip' y 'take' deben ser positivos." });
             }
-            
-            const location = await lastLocation(skip, take);
+    
+            const skipNum = parseInt(skip as string, 10);
+            const takeNum = parseInt(take as string, 10);
+    
+            if (isNaN(skipNum) || isNaN(takeNum) || skipNum < 0 || takeNum < 0) {
+                return res.status(400).json({ message: "Los parámetros 'skip' y 'take' tienen que ser un número y ademas positivo." });
+            }
+    
+            // console.log("skip", skipNum);
+            // console.log("take", takeNum);
+    
+            const location = await lastLocation(skipNum, takeNum);
             return res.status(200).json(location);
-
-        } catch (error: any) {
-            return res.status(500).json({ message: error.message })
-        }
+            } catch (error: any) {
+                return res.status(500).json({ message: error.message });
+            }
     }
 
 export { getAllTrajectories, getLocationHistory, getLastLocation}

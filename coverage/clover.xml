@@ -1,7 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716992160508" clover="3.2.0">
-  <project timestamp="1716992160508" name="All files">
-    <metrics statements="98" coveredstatements="91" conditionals="27" coveredconditionals="24" methods="16" coveredmethods="16" elements="141" coveredelements="131" complexity="0" loc="98" ncloc="98" packages="4" files="9" classes="9"/>
+<coverage generated="1717075614916" clover="3.2.0">
+  <project timestamp="1717075614917" name="All files">
+    <metrics statements="255" coveredstatements="238" conditionals="139" coveredconditionals="126" methods="65" coveredmethods="59" elements="459" coveredelements="423" complexity="0" loc="255" ncloc="255" packages="8" files="18" classes="18"/>
+    <package name="build">
+      <metrics statements="22" coveredstatements="22" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <file name="app.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\app.js">
+        <metrics statements="15" coveredstatements="15" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
+      <file name="db.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\db.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="swaggerOption.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\swaggerOption.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="build.controller">
+      <metrics statements="76" coveredstatements="67" conditionals="56" coveredconditionals="51" methods="22" coveredmethods="18"/>
+      <file name="taxis_controller.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\controller\taxis_controller.js">
+        <metrics statements="20" coveredstatements="18" conditionals="15" coveredconditionals="14" methods="9" coveredmethods="7"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+      </file>
+      <file name="trajectories_controller.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\controller\trajectories_controller.js">
+        <metrics statements="56" coveredstatements="49" conditionals="41" coveredconditionals="37" methods="13" coveredmethods="11"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="77" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="85" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="97" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="build.routes">
+      <metrics statements="18" coveredstatements="18" conditionals="14" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <file name="taxis_routes.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\routes\taxis_routes.js">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+      </file>
+      <file name="trajectories_routes.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\routes\trajectories_routes.js">
+        <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="129" count="2" type="stmt"/>
+        <line num="130" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="build.services">
+      <metrics statements="42" coveredstatements="40" conditionals="36" coveredconditionals="32" methods="24" coveredmethods="22"/>
+      <file name="db_taxis.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\services\db_taxis.js">
+        <metrics statements="16" coveredstatements="15" conditionals="18" coveredconditionals="16" methods="10" coveredmethods="9"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+      <file name="db_trajectories.js" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\build\services\db_trajectories.js">
+        <metrics statements="26" coveredstatements="25" conditionals="18" coveredconditionals="16" methods="14" coveredmethods="13"/>
+        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="src">
       <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.ts" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\src\app.ts">
@@ -31,7 +228,7 @@
       </file>
     </package>
     <package name="src.controller">
-      <metrics statements="54" coveredstatements="47" conditionals="27" coveredconditionals="24" methods="8" coveredmethods="8"/>
+      <metrics statements="53" coveredstatements="47" conditionals="26" coveredconditionals="24" methods="8" coveredmethods="8"/>
       <file name="taxis_controller.ts" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\src\controller\taxis_controller.ts">
         <metrics statements="10" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
@@ -46,7 +243,7 @@
         <line num="17" count="0" type="stmt"/>
       </file>
       <file name="trajectories_controller.ts" path="C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\src\controller\trajectories_controller.ts">
-        <metrics statements="44" coveredstatements="38" conditionals="24" coveredconditionals="21" methods="6" coveredmethods="6"/>
+        <metrics statements="43" coveredstatements="38" conditionals="23" coveredconditionals="21" methods="6" coveredmethods="6"/>
         <line num="3" count="2" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
@@ -76,21 +273,20 @@
         <line num="49" count="3" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
         <line num="56" count="2" type="stmt"/>
-        <line num="57" count="2" type="stmt"/>
-        <line num="58" count="2" type="cond" truecount="3" falsecount="0"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="61" count="1" type="cond" truecount="2" falsecount="1"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
-        <line num="68" count="1" type="cond" truecount="2" falsecount="1"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="84" count="2" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="81" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="96" count="1" type="cond" truecount="4" falsecount="1"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="104" count="1" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="110" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
