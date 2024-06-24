@@ -1,45 +1,9 @@
-// node upload-gps-data.js C:\Users\USUARIO\OneDrive\Escritorio\laboratoria\proyecto5\DEV013-fleet-management-api\pruebas
-// --type=taxis|trajectories
-// --dbname=<dbname>
-// --host=<hostname>
-// --port=<port>
-// --username=<username>
-
 // modulo file system 
 import { PrismaClient } from '@prisma/client';
 import { promises as fs } from 'fs';
 import * as path from 'path';
-// modulo para trabajar con las rutas
-// const path = require('path');
 
-// leer el directorio
-// leer el archivo
-// leer linea por linea
-// dividir deacuerdo al formato
-
-//recorrerlo e insertarlo a la base de datos
-
-// agregar las validaciones "no hay mucho que validar"
-// manejar el error
-// console.log("path", path);
 console.log("process", process.argv.slice(2));
-
-// const argv = process.argv.slice(2)
-// console.log("argv", argv);
-// // const data = fs.readFileSync(argv, "utf-8")
-// // console.log("data", data );
-// // const content = fs.readdirSync(argv)
-
-// // console.log("content", content);
-
-// const pathJoin = path.join(__dirname, "./pruebas/taxis.txt")
-
-// console.log("pathJoin", pathJoin);
-
-// const content = fs.readFileSync(pathJoin, "utf-8")
-
-// console.log("content2", content);
-
 
 //filePath: La ruta del archivo que se va a procesar.
 //type: string: El tipo de datos que se están procesando 
@@ -82,22 +46,15 @@ async function processFile(filePath: string, type: string, prisma: PrismaClient)
         console.error(`Error processing file ${filePath}:`, error);
     }
 }
-
-
 //Leer una carpeta especifica de la línea de comandos
 //Filtrar los archivos de texto en la carpeta.
 //Llamar a processFile para cada archivo de texto para procesar e insertar sus datos en la base de datos.
 
 // Funcion Leer, identificar o filtrar y procesar (llamar a la funcion)
-// nombre descriptivo 
-
-
 async function processFolderAndInsertRecords(): Promise<void> {
     const prisma = new PrismaClient({
         log: ['query', 'info', 'warn', 'error'],
       })
-      
-
         try {
             // Obtener los argumentos de la línea de comandos, omitiendo los dos primeros elementos.
             const args: string[] = process.argv.slice(2);

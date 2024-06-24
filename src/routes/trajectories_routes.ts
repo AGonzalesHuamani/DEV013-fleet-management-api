@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { getAllTrajectories, getLocationHistory, getLastLocation} from '../controller/trajectories_controller'
+import { getAllTrajectories, getLocationHistory, getLastLocation, getExportExcel } from '../controller/trajectories_controller'
 
 const routerTrajectories: Router = express.Router();
 
@@ -127,5 +127,6 @@ routerTrajectories.get('/trajectories/:id', getLocationHistory );
  */
 routerTrajectories.get('/lastlocation', getLastLocation); // ultima ubicación
 
+routerTrajectories.get("/exportExcel/:id", getExportExcel);
 
 export default routerTrajectories;
