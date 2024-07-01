@@ -1,7 +1,9 @@
 // import   prisma  from '../db'
 import { Handler } from 'express'
-import { locationHistory, allTrajectories, lastLocation } from '../services/db_trajectories'
-
+import { locationHistory, allTrajectories, lastLocation, getDataExport } from '../services/db_trajectories'
+import * as XLSX from "xlsx"
+import * as  nodemailer from "nodemailer"
+import * as fs from "fs"
 
 const getAllTrajectories: Handler = async (req, res) => {
         try {
@@ -79,6 +81,71 @@ const getLastLocation: Handler = async (req, res) => {
             }
     }
 
-export { getAllTrajectories, getLocationHistory, getLastLocation}
+
+// exportar trayectorias segun id y fecha /trajectories/id/export
+const getExportExcel: Handler = async (req, res) => {
+    const { id } = req.params
+    // obtener email 
+    const { date, email } = req.query 
+    // Convertir la fecha a formato de objeto Date
+    const searchdate = new Date(date as string) 
+    try {
+      const data = await getDataExport(id, searchdate)
+      // generar el archivo excel // genera una hoja de trabajo a partir de los datos
+      const worksheet = XLSX.utils.json_to_sheet(data as object[]); 
+      console.log("este es worksheet",worksheet);
+      
+      // crea un nuevo libro 
+      const workbook = XLSX.utils.book_new(); 
+      console.log("este es workbook",workbook);
+      //Añade la hoja de trabajo al libro de trabajo
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Trayectorias');
+      // Verifica si la carpeta temp existe
+      if (!fs.existsSync('./temp')) {
+        fs.mkdirSync('./temp'); // Crea la carpeta temp si no existe
+      }
+      const filePath = `./temp/trajectories_${id}_${date}.xlsx`; // define la ruta del archivo excel a crear
+  
+      // Crear el archivo temporalmente
+      XLSX.writeFile(workbook, filePath);
+  
+      const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+  
+        auth: {
+          user: process.env.EMAIL,
+          pass: process.env.EMAIL_PASSWORD,
+        },
+      });
+      const mailOptions = {
+        from: process.env.EMAIL, // Remitente
+        to: email as string, // Destinatario
+        subject: 'Exportación de trayectorias intento 2222222221',
+        text: '¡Hola! Este es un correo electrónico de prueba 2222222221', // Contenido del correo (texto plano)
+        attachments: [ //adjuntar 
+          {
+            filename: `trajectories_${id}_${date}.xlsx`, // aqui le damos el nombre al archivo excel
+            path: filePath, // aqui le pasamos el excel generado
+          },
+        ],
+      };
+  
+      // Enviar el correo
+      await transporter.sendMail(mailOptions);
+      //console.log('Correo electrónico enviado');
+  
+      // // Eliminar el archivo temporal
+      // fs.unlinkSync(filePath);
+      return res.status(200).json({ message: 'El archivo Excel ha sido enviado por correo electrónico' });
+  
+    } catch (error) {
+      console.error('Error al obtener las ubicaciones del taxi', error);
+      return res.status(500).json({ message: 'Error interno del servidor' });
+    }
+  
+  }
+
+
+export { getAllTrajectories, getLocationHistory, getLastLocation, getExportExcel}
 
 
