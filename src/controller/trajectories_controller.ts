@@ -93,8 +93,11 @@ const getExportExcel: Handler = async (req, res) => {
       const data = await getDataExport(id, searchdate)
       // generar el archivo excel // genera una hoja de trabajo a partir de los datos
       const worksheet = XLSX.utils.json_to_sheet(data as object[]); 
+      console.log("este es worksheet",worksheet);
+      
       // crea un nuevo libro 
       const workbook = XLSX.utils.book_new(); 
+      console.log("este es workbook",workbook);
       //Añade la hoja de trabajo al libro de trabajo
       XLSX.utils.book_append_sheet(workbook, worksheet, 'Trayectorias');
       // Verifica si la carpeta temp existe
@@ -117,8 +120,8 @@ const getExportExcel: Handler = async (req, res) => {
       const mailOptions = {
         from: process.env.EMAIL, // Remitente
         to: email as string, // Destinatario
-        subject: 'Exportación de trayectorias intento 5555555557',
-        text: '¡Hola! Este es un correo electrónico de prueba 5555555557', // Contenido del correo (texto plano)
+        subject: 'Exportación de trayectorias intento 2222222221',
+        text: '¡Hola! Este es un correo electrónico de prueba 2222222221', // Contenido del correo (texto plano)
         attachments: [ //adjuntar 
           {
             filename: `trajectories_${id}_${date}.xlsx`, // aqui le damos el nombre al archivo excel

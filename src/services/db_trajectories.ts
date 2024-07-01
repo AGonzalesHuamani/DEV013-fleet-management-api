@@ -1,7 +1,10 @@
-import prisma from '../db'
+// import {prisma} from '../db'
+import { PrismaClient } from "@prisma/client"
 // import * as XLSX from 'xlsx';
 // import * as nodemailer from 'nodemailer';
-
+const prisma = new PrismaClient({
+  log: ['query', 'info', 'warn', 'error'],
+})
 
 
 export const allTrajectories = async (skip: number, take: number) : Promise<any> => {
